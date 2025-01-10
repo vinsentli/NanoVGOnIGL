@@ -4,7 +4,10 @@ NanovgOnIGL是将[nanovg](https://github.com/memononen/nanovg)与[igl](https://g
 
 Support Platforms : MacOS, Windows, Linux, iOS, Android.
 
-Demo搭建流程：补充中。
+## Demo搭建流程
+补充中。
+
+## Screenshot
 
 Metal :
 
