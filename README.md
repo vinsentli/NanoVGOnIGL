@@ -1,6 +1,6 @@
 # iglNanoVG
 
-iglNanoVG是将[nanovg](https://github.com/memononen/nanovg)与[igl](https://github.com/facebook/igl)相结合而实现的项目，使NanoVG能够运行在Opengl, Metal, Vulkan之上。
+iglNanoVG是将[nanovg](https://github.com/memononen/nanovg)与[igl](https://github.com/facebook/igl)相结合而实现的项目，使NanoVG能够运行在OpenGL, Metal, Vulkan之上。
 
 Support Platforms : MacOS, Windows, Linux, iOS, Android.
 
