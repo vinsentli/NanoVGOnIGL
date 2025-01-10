@@ -89,7 +89,7 @@ NSColorSpace* colorSpaceToNSColorSpace(igl::ColorSpace colorSpace) {
       .height = 768,
       .windowMode = igl::shell::WindowMode::Window,
   };
-  constexpr auto kColorFramebufferFormat = igl::TextureFormat::BGRA_SRGB;
+  constexpr auto kColorFramebufferFormat = igl::TextureFormat::RGBA_UNorm8;
   std::vector<igl::shell::RenderSessionConfig> suggestedSessionConfigs = {
 #if IGL_BACKEND_HEADLESS
       {
