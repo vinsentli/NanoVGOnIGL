@@ -1,31 +1,36 @@
-# iglNanoVG
+# igl-nanovg
 
-iglNanoVG是将[nanovg](https://github.com/memononen/nanovg)与[igl](https://github.com/facebook/igl)相结合而实现的项目，使NanoVG能够运行在OpenGL, Metal, Vulkan之上。
+igl-nanovg is a project that combines [nanovg](https://github.com/memononen/nanovg) with [igl](https://github.com/facebook/igl), enabling nanovg to run on opengl, metal, and vulkan.
 
 Support Platforms : MacOS, Windows, Linux, iOS, Android.
 
-项目最初是想提交PR合入[igl](https://github.com/facebook/igl)，但是facebook/igl团队认为与他们想最小化减少对第三方项目依赖的原则相冲突，所以单独建立此仓库。
+The project originally wanted to submit a PR to merge into [igl](https://github.com/facebook/igl) , but the Facebook/igl team thought that it conflicted with their principle of minimizing dependence on third-party projects, so i created this repository separately.
 
-原始PR: https://github.com/facebook/igl/pull/213
+Original PR: https://github.com/facebook/igl/pull/213
 
-## Demo搭建流程
+## Build Demo
 
-1，在根目录下执行 
+1，Download the code (including submodule:igl)：
+```
+git clone --recursive https://github.com/vinsentli/igl-nanovg.git
+```
+
+2，Execute script in the root directory：
 
 ```
 prepare.sh
 ```
 
-2，进入igl目录执行，按照igl要求执行脚本和CMake命令，打开igl工程。
+3，Enter the igl directory and execute the script and CMake commands according to the igl requirements to open the igl project
 
-1）执行脚本，下载依赖的第三方代码:
+1）Execute the script to download the third-party code that igl depends on:
 
 ```
 python3 deploy_deps.py
 
 ```
 
-2）执行CMake命令，生成工程：
+2）Execute the CMake command to generate the project：
 
 * Windows
 
@@ -60,13 +65,13 @@ cmake .. -G Xcode -DCMAKE_TOOLCHAIN_FILE=../third-party/deps/src/ios-cmake/ios.t
 
 The Gradle project is located within the [build/android](./build/android/) folder.
 
-3，编译运行工程：
+4，Compile and run the project：
 
-1）Linux, Macos, Windows, iOS选择NanovgSession工程。
+1）For Linux, MacOS, Windows, or iOS, select the NanovgSession project。
 
-2）Android选择nanovg工程。
+2）Select nanovg project for Android。
 
-	修改SampleLib.java:
+	modify SampleLib.java:
 	System.loadLibrary("NanovgSession");
 
 
