@@ -27,6 +27,7 @@ macro(ADD_IGLU_MODULE module)
   target_include_directories(IGLU${module} PUBLIC "${IGL_ROOT_DIR}")
   if (IGLU_WITH_NANOVG)
     target_include_directories(IGLU${module} PUBLIC "${IGL_ROOT_DIR}/third-party/deps/src/nanovg/src")
+    target_include_directories(IGLU${module} PUBLIC "${IGL_ROOT_DIR}/../src")
   endif()
 endmacro()
 
@@ -68,6 +69,11 @@ target_include_directories(IGLUtexture_accessor PUBLIC "${IGL_ROOT_DIR}/third-pa
 # Nanovg
 if (IGLU_WITH_NANOVG)
   target_sources(IGLUnanovg PRIVATE "${IGL_ROOT_DIR}/third-party/deps/src/nanovg/src/nanovg.c")
+  target_sources(IGLUnanovg PRIVATE "${IGL_ROOT_DIR}/third-party/deps/src/nanovg/src/nanovg.h")
+  target_sources(IGLUnanovg PRIVATE "${IGL_ROOT_DIR}/../src/nanovg_igl.h")
+  target_sources(IGLUnanovg PRIVATE "${IGL_ROOT_DIR}/../src/nanovg_igl.cpp")
+  target_sources(IGLUnanovg PRIVATE "${IGL_ROOT_DIR}/../src/shader_metal.h")
+  target_sources(IGLUnanovg PRIVATE "${IGL_ROOT_DIR}/../src/shader_opengl.h")
 endif()
 
 if(UNIX)

@@ -22,7 +22,7 @@
 
 #include "demo.h"
 #include "perf.h"
-#include <IGLU/nanovg/nanovg_igl.h>
+#include <nanovg_igl.h>
 #include <igl/IGL.h>
 #include <nanovg.h>
 #include <shell/shared/input/InputDispatcher.h>
